@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fact API - About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <link rel="stylesheet" href="../static/stylesheets/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/codeblocks.css') }}">
+    <link rel="stylesheet" href="../static/stylesheets/codeblocks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navigation-container">
+        <ul>
+            <li><a href="{{ url_for('show_main_page') }}">Home</a></li>
+            <li><a href="https://github.com/ruxixa">GitHub</a></li>
+            <li><a href="{{ url_for('show_about_page') }}">About</a></li>
+        </ul>
+    </div>    
+    <div id="about-container">
+        <h1>How to Use It</h1><br>
+        <h3>1. Getting a Random Fact</h3>
+        <p>Send a GET request to <span class="comment">/randomfact</span> endpoint</p><br>
+        <p>Code Example (Python)</p>
+        <code>
+            <span class="keyword">import</span> requests<br><br>
+            <span class="keyword">headers</span> = {<br> 
+                <span class="indent">"Content-type": "application/json"</span><br>
+            }<br><br>
+            <span class="keyword">response</span> = requests.<span class="method">get</span>(<br>
+                <span class="indent">'http://127.0.0.1:5000/randomfact'</span><br>
+            )<br><br>
+            <span class="comment"># You can now print your response</span><br>
+            <span class="keyword">print</span>(<span class="method">f</span><span class="string">'response: {response}'</span>)
+        </code><br><br>
+        
+        <h3>2. Getting All Facts</h3>
+        <p>Send a GET request to <span class="comment">/factbase</span> endpoint</p>
+        <code>
+            <span class="keyword">import</span> requests<br><br>
+            <span class="keyword">headers</span> = {<br> 
+                <span class="indent">"Content-type": "application/json"</span><br>
+            }<br><br>
+            <span class="keyword">response</span> = requests.<span class="method">get</span>(<br>
+                <span class="indent">'http://127.0.0.1:5000/factbase'</span><br>
+            )<br><br>
+            <span class="comment"># You can now print your response</span><br>
+            <span class="keyword">print</span>(<span class="method">f</span><span class="string">'response: {response.json()}'</span>)
+        </code>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+code {
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 12px;
+    display: inline-block;
+    margin: 20px;
+    text-align: left;
+}
+
+span {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+.keyword {
+    color: #007BFF;
+}
+
+.method {
+    color: #6610F2;
+}
+
+.string {
+    color: #28A745;
+}
+
+.comment {
+    color: #6C757D;
+}

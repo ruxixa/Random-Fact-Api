@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fact API - About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <link rel="stylesheet" href="../static/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navigation-container">
+        <ul>
+            <li><a href="{{ url_for('show_main_page') }}">Home</a></li>
+            <li><a href="https://github.com/ruxixa">GitHub</a></li>
+            <li><a href="{{ url_for('show_api_page')}}">API</a></li>
+        </ul>
+    </div>
+    <div id="about-container">
+        <h1>Random Fact API</h1>
+        <p>is my first API created using Python.</p><br>
+        <h3>Technologies I Used:</h3>
+        <ul>
+            <li><a href="https://www.python.org">Python (programming language)</a></li>
+            <li><a href="https://flask.palletsprojects.com/">Flask (used to create the API)</a></li>
+        </ul><br>
+        <h3>You Can Find a Tutorial on How to Use It</h3>
+        <p>In the <a href="api.html">API</a> section.</p><br>
+
+        <h3>My GitHub Profile</h3>
+        <p><a href="https://github.com/ruxixa">is here</a></p>
+    </div>
+</body>
+</html>
